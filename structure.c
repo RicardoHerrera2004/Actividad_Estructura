@@ -15,10 +15,11 @@ struct alumno
 int main()
 {
     struct alumno estudiante[10];
-    // Se declara cuantos alumnos ingresaran al programa
+    // Se declara la estructura de los alumnos
 
     int a;
-    // Definimos la variable a para las opciones del menu
+    int i = 0;
+    // Definimos la variable a para las opciones del menu y el i
 
     do
     {
@@ -57,26 +58,27 @@ int main()
             fflush(stdin);
             // Ingreso del promedio del alumno
 
-            i = i + i;
+            i++;
             // Se incrementa el numero de estudiante
 
             break;
 
         case 2:
+
             printf("-Bienvenido al mostrador de datos de los estudiantes- \n");
             for (int j = 0; j < i; j++)
             {
-                printf("\nEstudiante %d:\n", j + 1);                 
-                printf("Matricula: %d\n", estudiantes[j].matricula); 
-                printf("Nombre: ");                                  
-                puts(estudiantes[j].nombre);
-                printf("Direccion: "); 
-                puts(estudiantes[j].direccion);
-                printf("Carrera: "); 
-                puts(estudiantes[j].carrera);
-                printf("Promedio: %.2f\n", estudiantes[j].promedio); 
+                printf("Estudiante %d\n", j + 1);
+                printf("Matricula: %d\n", estudiante[j].matricula);
+                printf("Nombre: ");
+                puts(estudiante[j].nombre);
+                printf("Direccion: ");
+                puts(estudiante[j].direccion);
+                printf("Carrera: ");
+                puts(estudiante[j].carrera);
+                printf("Promedio: %.2f\n", estudiante[j].promedio);
             }
-            //Bucle para que lea a todos los estudiantes que ingresa
+            // Bucle para que lea a todos los estudiantes que ingresa
 
             break;
 
